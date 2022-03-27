@@ -34,28 +34,21 @@ class Auto:
 peugeot = Auto("4A2 3020", "Peugeot", "403 Cabrio", 47534)
 skoda = Auto("1P3 4747", "Škoda", "Octavia", 41253)
 
-uzivatel = input("Jakou značku auta si přejete půjčit? ")
 
 
-if uzivatel == "Škoda":
-    print(skoda.get_info())
-    print(skoda.pujc_auto())
-elif uzivatel == "Peugeot":
-    print(peugeot.get_info())
-    print(peugeot.pujc_auto())
-else:
-    print("Vámi zadané auto není v naší nabídce.")
+def dotaz_na_pujceni():
+    uzivatel = input("Jakou značku auta si přejete půjčit? ")
 
-uzivatel = input("Jakou značku auta si přejete půjčit? ")
+    if uzivatel == "Škoda":
+        print(skoda.get_info())
+        print(skoda.pujc_auto())
+    elif uzivatel == "Peugeot":
+        print(peugeot.get_info())
+        print(peugeot.pujc_auto())
+    else:
+        print("Vámi zadané auto není v naší nabídce.")
 
-
-if uzivatel == "Škoda":
-    print(skoda.get_info())
-    print(skoda.pujc_auto())
-elif uzivatel == "Peugeot":
-    print(peugeot.get_info())
-    print(peugeot.pujc_auto())
-else:
-    print("Vámi zadané auto není v naší nabídce.")
+dotaz_na_pujceni()
+dotaz_na_pujceni()
 
 print(skoda.vrat_auto(48500, 8))
