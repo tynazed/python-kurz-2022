@@ -11,9 +11,5 @@ print(lines)
 lines = [[line[0], float(line[1].replace(",", "."))] for line in lines]
 print(lines)
 
-seznam_km = []
-seznam_km = [line[1] for line in lines]
-print(seznam_km)
-
-soucet_km = sum(seznam_km)
+soucet_km = sum([line[1] for line in lines])
 print(f"Auta celkem ujela {soucet_km} tisíc km.")
